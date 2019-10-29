@@ -19,6 +19,14 @@ const (
 	FATAL
 )
 
+// Logger log interface
+type Logger interface {
+	Debugf(string, ...interface{})
+	Infof(string, ...interface{})
+	Warnf(string, ...interface{})
+	Errorf(string, ...interface{})
+}
+
 // Log log
 type Log struct {
 	opts   Options
